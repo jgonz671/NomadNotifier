@@ -8,14 +8,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  min-height: 100vh;
 }
 
-.App-header {
+.App-header{
   color: #eae6e6;
   font-weight: 400;
   font-size: 20px;
@@ -23,65 +18,55 @@
   padding: 2rem;
 }
 
-.typewriter-container {
+.typewriter-container{
   margin-bottom: 2rem;
-  font-size: 3rem;
+  align-items: center;
+  font-size: 4rem;
   color: #555;
   font-family: monospace;
 }
 
- h1 {
+ h1{
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
   color: #6e8191;
 }
 
-p {
+p{
   color: #555;
   margin-bottom: 2rem;
 }
 
-.buttons {
+.buttons{
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.btn {
+.btn{
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: monospace;
   font-weight: 500;
+  background-color: #36a2b3;
+  color: white;
   transition: background-color 0.3s;
 }
 
-.plan-travel-btn {
-  background-color: #4caf50;
-  color: white;
+.btn:hover{
+  background-color: rgba(37, 136, 151, 0.906)
 }
 
-.plan-travel-btn:hover {
-  background-color: #388e3c;
-}
-
-.login-btn {
-  background-color: #2196f3;
-  color: white;
-}
-
-.login-btn:hover {
-  background-color: #1e88e5;
-}
-
-#root {
+#root{
   max-width: 2000px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-body {
+body{
   margin: 0;
   padding: 0;
   background-color: #ebefef; 
