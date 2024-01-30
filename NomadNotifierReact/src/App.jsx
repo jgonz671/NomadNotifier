@@ -23,6 +23,8 @@ function App() {
         <div className="buttons">
           <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
           <button className="btn login-btn" onClick={() => navigate('/Login')}>Login</button>
+          <button className="btn past-travel-btn" onClick={() => navigate('/past-travel')}>Past Travels</button>
+          <button className="btn calender-btn" onClick={() => navigate('/Calender')}>Calender</button>
         </div>
       </header>
     </div>
