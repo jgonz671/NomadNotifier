@@ -5,7 +5,7 @@ export default function Travel() {
     return (
         <div id="travel">
             <p>
-                Plan your travel now!
+                Travel page
             </p>
         </div>
     );
