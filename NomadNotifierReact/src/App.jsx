@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div className="typewriter-container">
-        <Typewriter
+        <div className="typewriter-container">
+          <Typewriter
             onInit={(typewriter) => {
               typewriter
                 .typeString("Create. Plan. Enjoy.")
@@ -21,11 +21,10 @@ function App() {
           />
         </div>
         <div className="buttons">
-        <button className="btn plan-travel-btn" onClick={() => navigate('/error')}>Plan a Travel</button>
-          <button className="btn login-btn" onClick={() => navigate('/error')}>Login</button>
+          <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
+          <button className="btn login-btn" onClick={() => navigate('/Login')}>Login</button>
         </div>
       </header>
-      <Outlet />
     </div>
   );
 }
