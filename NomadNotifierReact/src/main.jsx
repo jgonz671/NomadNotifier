@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Login from './Login'
 import Travel from './Travel'
 import App from './App'
-import Calender from './Calender'
+import Calendar from './Calendar'
 import PastTravel from './PastTravel'
 import CreateAccount from './CreateAccount'
 import "./index.css";
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
     element: <PastTravel />,
   },
   {
-    path: "/calender",
-    element: <Calender />,
+    path: "/calendar",
+    element: <Calendar />,
   },
 ]);
 

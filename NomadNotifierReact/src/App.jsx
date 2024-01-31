@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Typewriter from "typewriter-effect";
 import './App.css';
 
@@ -24,7 +24,7 @@ function App() {
           <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
           <button className="btn login-btn" onClick={() => navigate('/Login')}>Login</button>
           <button className="btn past-travel-btn" onClick={() => navigate('/past-travel')}>Past Travels</button>
-          <button className="btn calender-btn" onClick={() => navigate('/Calender')}>Calender</button>
+          <button className="btn calender-btn" onClick={() => navigate('/Calendar')}>Calendar</button>
         </div>
       </header>
     </div>
