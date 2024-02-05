@@ -1,4 +1,4 @@
-/* CreateAccount.css
+CreateAccount.css
 div {
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@ div {
 }
 
 h2 {
-    color: #333;
+    color: #333333;
     margin-bottom: 20px;
 }
 
@@ -42,4 +42,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-} */
+}

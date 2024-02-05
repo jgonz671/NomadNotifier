@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Travel.css'; 
+import '../styles/Travel.css'; 
 
 export default function Travel() {
     return (

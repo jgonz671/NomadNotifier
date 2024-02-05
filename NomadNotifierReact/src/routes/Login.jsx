@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import '../styles/Login.css'; // Make sure this path is correct
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
@@ -9,10 +9,7 @@ export default function LoginPage() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-
-    
         console.log('Login:', username, password);
-
     };
 
     const handleCreateAccount = () => {
@@ -20,9 +17,9 @@ export default function LoginPage() {
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin} className="login-form">
                 <div>
                     <label htmlFor="username">Username:</label>
                     <input
@@ -43,7 +40,7 @@ export default function LoginPage() {
                 </div>
                 <button type="submit">Enter</button>
             </form>
-            <button onClick={handleCreateAccount}>Create New Account</button>
+            <button onClick={handleCreateAccount} className="create-account-btn">Create New Account</button>
         </div>
     );
 }
