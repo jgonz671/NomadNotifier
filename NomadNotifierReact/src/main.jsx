@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Login from './Login'
-import Travel from './Travel'
+import Login from './routes/Login'
+import Travel from './routes/Travel'
 import App from './App'
-import Calendar from './Calendar'
-import PastTravel from './PastTravel'
-import CreateAccount from './CreateAccount'
+import Calendar from './routes/Calendar'
+import PastTravel from './routes/PastTravel'
+import CreateAccount from './routes/CreateAccount'
 import "./index.css";
 import Root from "./routes/root";
 
@@ -19,7 +19,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Root /> },
+      { 
+        index: true, 
+        element: <Root /> 
+      },
     ],
   },
   {
