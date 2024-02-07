@@ -29,10 +29,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-  {
-    path: "/travel",
-    element: <Travel />,
-  },
+
   {
     path: "/create-account",
     element: <CreateAccount />,
@@ -44,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/calendar",
     element: <Calendar />,
+  },
+  {
+    path: "/travel",
+    element: <Travel />,
   },
 ]);
 
