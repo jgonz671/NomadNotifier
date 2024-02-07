@@ -6,6 +6,8 @@ import App from './App'
 import Calendar from './routes/Calendar'
 import PastTravel from './routes/PastTravel'
 import CreateAccount from './routes/CreateAccount'
+import Destination from './routes/Destination'
+import Hotel from './routes/Hotel'
 import "./index.css";
 import Root from "./routes/root";
 
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
   {
     path: "/travel",
     element: <Travel />,
+  },
+  {
+    path: "/destination",
+    element: <Destination />,
+  },
+  {
+    path: "/hotel",
+    element: <Hotel />,
   },
 ]);
 

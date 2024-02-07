@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Travel.css'
 
 
 export default function PlanTravel() {
@@ -14,7 +13,7 @@ export default function PlanTravel() {
 
 
    return (
-       <div className="travel-container">
+       <div className="web-container">
            <h2>Plan Your Travel</h2>
            <label htmlFor="people">How many people?</label>
            <select id="people" value={people} onChange={e => setPeople(e.target.value)}>
