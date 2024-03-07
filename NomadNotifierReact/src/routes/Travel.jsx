@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,  useLocation } from 'react-router-dom';
 
 
 export default function PlanTravel() {
@@ -8,7 +8,7 @@ export default function PlanTravel() {
 
 
    const handleNext = () => {
-       navigate('/destination', { people });
+       navigate('/destination');
    };
 
 

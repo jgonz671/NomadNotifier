@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ConfirmReservation = ({ travelChoice, roomNumberChoice, destinationChoice, hotelChoice }) => {
+const ConfirmReservation = ({ people, destination, hotel, number }) => {
     return (
-        <div>
+        <div className="web-container">
             <h1>Confirm Reservation</h1>
-            <p>Travel: {travelChoice}</p>
-            <p>Room Number: {roomNumberChoice}</p>
-            <p>Destination: {destinationChoice}</p>
-            <p>Hotel: {hotelChoice}</p>
+            <p>How many people are going: {people}</p>
+            <p>City visiting: {destination}</p>
+            <p>Hotel Name: {hotel}</p>
+            <p>Number of Rooms: {number}</p>
             <button>Confirm</button>
         </div>
     );

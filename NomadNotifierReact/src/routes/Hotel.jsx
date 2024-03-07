@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Hotel() {
     const [hotel, setHotel] = useState('');
@@ -43,8 +42,3 @@ export default function Hotel() {
         </div>
     );
 }
-
-
-
-
-

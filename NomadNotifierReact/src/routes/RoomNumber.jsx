@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function PlanTravel() {
    const [number, setNumber] = useState(1);
@@ -8,7 +7,7 @@ export default function PlanTravel() {
 
 
    const handleNext = () => {
-       navigate('/confirmres', { number });
+       navigate('/confirm-reservation', { number });
    };
 
 
