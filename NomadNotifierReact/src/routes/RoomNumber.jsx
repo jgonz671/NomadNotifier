@@ -4,10 +4,13 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function PlanTravel() {
    const [number, setNumber] = useState(1);
    const navigate = useNavigate();
+   const location = useLocation();
+
+   const { people, destination, hotel } = location.state || { people: 1, destination: '', hotel: '' };
 
 
    const handleNext = () => {
-       navigate('/confirm-reservation', { number });
+       navigate('/confirm-reservation', {state: { people, destination, hotel, number }});
    };
 
 

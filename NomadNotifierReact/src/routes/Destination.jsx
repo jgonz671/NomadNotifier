@@ -4,6 +4,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 export default function Destination() {
     const [destination, setDestination] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const { people } = location.state || { people: 1 }; 
 
     const destinations = [
         { id: 1, name: 'New York, United States' },
@@ -15,7 +18,7 @@ export default function Destination() {
     ];
 
     const handleNext = () => {
-        navigate('/hotel', { destination }); 
+        navigate('/hotel', { state: { people, destination } }); 
     };
 
     return (

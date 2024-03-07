@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate , useLocation } from 'react-router-dom';
+
 
 export default function Hotel() {
     const [hotel, setHotel] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
 
+    const { people, destination } = location.state || { people: 1, destination: '' };
 
     const hotels = [
         { id: 1, name: 'Hilltop Hotel' },
@@ -17,7 +20,7 @@ export default function Hotel() {
 
 
     const handleNext = () => {
-        navigate('/roomnumber', { hotel });
+        navigate('/roomnumber', { state: { people, destination, hotel } });
     };
 
 

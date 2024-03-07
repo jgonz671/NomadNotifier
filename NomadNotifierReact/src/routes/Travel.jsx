@@ -8,7 +8,7 @@ export default function PlanTravel() {
 
 
    const handleNext = () => {
-       navigate('/destination');
+       navigate('/destination', { state: { people } });
    };
 
 
