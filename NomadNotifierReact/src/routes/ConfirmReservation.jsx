@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ConfirmReservation = () => {
+export default function ConfirmReservation(){
     const location = useLocation(); 
     const { people, destination, hotel, number } = location.state || {}; 
 
@@ -21,5 +21,4 @@ const ConfirmReservation = () => {
     );
 };
 
-export default ConfirmReservation;
 
