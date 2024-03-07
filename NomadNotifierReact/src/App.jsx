@@ -12,9 +12,11 @@ function App() {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
+                .changeDelay(60)
                 .typeString("Create. Plan. Enjoy.")
                 .pauseFor(1000)
                 .deleteAll()
+                .changeDelay(60)
                 .typeString("Nomad Notifier.")
                 .start();
             }}
