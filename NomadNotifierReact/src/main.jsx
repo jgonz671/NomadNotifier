@@ -8,6 +8,7 @@ import PastTravel from './routes/PastTravel'
 import CreateAccount from './routes/CreateAccount'
 import Destination from './routes/Destination'
 import Hotel from './routes/Hotel'
+import RoomNumber from './routes/RoomNumber'
 import "./index.css";
 import Root from "./routes/root";
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/hotel",
     element: <Hotel />,
+  },
+  {
+    path: "/roomnumber",
+    element: <RoomNumber />,
   },
 ]);
 
