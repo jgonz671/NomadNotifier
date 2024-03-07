@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function PlanTravel() {
    const [number, setNumber] = useState(1);
+   const navigate = useNavigate();
 
+
+   const handleNext = () => {
+       navigate('/confirmres', { number });
+   };
 
 
    return (
@@ -16,6 +22,7 @@ export default function PlanTravel() {
                ))}
            </select>
            <br />
+           <button className="next-button" onClick={handleNext}>Next</button>
        </div>
    );
 }

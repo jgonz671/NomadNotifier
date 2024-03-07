@@ -15,7 +15,7 @@ export default function Destination() {
     ];
 
     const handleNext = () => {
-        navigate('/hotel'); 
+        navigate('/hotel', { destination }); 
     };
 
     return (

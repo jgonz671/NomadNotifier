@@ -18,7 +18,7 @@ export default function Hotel() {
 
 
     const handleNext = () => {
-        navigate('/roomnumber');
+        navigate('/roomnumber', { hotel });
     };
 
 

@@ -9,6 +9,7 @@ import CreateAccount from './routes/CreateAccount'
 import Destination from './routes/Destination'
 import Hotel from './routes/Hotel'
 import RoomNumber from './routes/RoomNumber'
+import ConfirmReservation from './routes/ConfirmReservation'
 import "./index.css";
 import Root from "./routes/root";
 
@@ -60,7 +61,11 @@ const router = createBrowserRouter([
   {
     path: "/roomnumber",
     element: <RoomNumber />,
-  }
+  },
+  {
+    path: "/confirm-reservation",
+    element: <ConfirmReservation />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
