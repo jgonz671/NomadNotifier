@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
-import '../styles/Calendar.css'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-const Calendar = () => {
+export default function Calendar(){
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+
     return (
-        <div className="calendar-container">
-            <h2 className="calendar-heading">Calendar</h2>
+        <div>
+            <DatePicker
+                selected={startDate}
+                onChange={(dates) => {
+                    const [start, end] = dates;
+                    setStartDate(start);
+                    setEndDate(end);
+                }}
+                startDate={startDate}
+                endDate={endDate}
+                selectsRange
+                inline
+            />
         </div>
     );
-}
-
-export default Calendar;
+};
