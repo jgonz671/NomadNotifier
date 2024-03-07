@@ -60,7 +60,7 @@ const router = createBrowserRouter([
   {
     path: "/roomnumber",
     element: <RoomNumber />,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

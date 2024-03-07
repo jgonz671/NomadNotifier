@@ -25,9 +25,9 @@ export default function Hotel() {
     return (
         <div className="web-container">
             <h2>Where would you like to stay?</h2>
-            <label htmlFor="places">Select a stay:</label>
+            <label htmlFor="stays">Select a stay:</label>
             <select
-                id="places"
+                id="stays"
                 value={hotel}
                 onChange={(e) => setHotel(e.target.value)}
             >
@@ -39,7 +39,7 @@ export default function Hotel() {
                 ))}
             </select>
             <br />
-            <button className="next-button" onClick={handleNext} disabled={!destination}>Next</button>
+            <button className="next-button" onClick={handleNext} disabled={!hotel}>Next</button>
         </div>
     );
 }

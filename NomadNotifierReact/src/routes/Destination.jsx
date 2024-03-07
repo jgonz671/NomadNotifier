@@ -35,7 +35,7 @@ export default function Destination() {
                 ))}
             </select>
             <br />
-            <button className="next-button" onClick={handleNext}>Next</button>
+            <button className="next-button" onClick={handleNext} disabled={!destination}>Next</button>
         </div>
     );
 }
