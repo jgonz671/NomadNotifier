@@ -23,9 +23,3 @@ const ConfirmReservation = () => {
 
 export default ConfirmReservation;
 
-{/* <label htmlFor="people">Number of people going: {people}</label>
-            <label htmlFor="destination">Where we're headed: {destination}</label>
-            <label htmlFor="hotel">Where we're staying: {hotel}</label>
-            <label htmlFor="number">How many rooms we have: {number}</label>
-            <h2>Everything looks good?</h2>
-            <button className="next-button" onClick={handleNext}>Confirm</button> */}
