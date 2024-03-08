@@ -22,3 +22,7 @@ run these lines of code sequentially, so we can get the right packages to run wi
 sudo agt-get autoremove
 npm install
 ```
+For our calendar, we use the react date picker by installing:
+```bash
+npm install react-datepicker --save
+```
