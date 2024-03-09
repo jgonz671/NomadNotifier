@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Login from './routes/Login'
+import SignIn from './routes/SignIn'
 import Travel from './routes/Travel'
 import App from './App'
 import Calendar from './routes/Calendar'
@@ -23,15 +23,15 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { 
-        index: true, 
-        element: <Root /> 
+      {
+        index: true,
+        element: <Root />
       },
     ],
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/sign-in",
+    element: <SignIn />,
   },
 
   {
