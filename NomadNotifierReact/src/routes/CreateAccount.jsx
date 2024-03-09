@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 import '../styles/CreateAccount.css'; 
 
 export default function CreateAccountPage() {
@@ -7,8 +9,15 @@ export default function CreateAccountPage() {
 
     const handleCreateAccount = (e) => {
         e.preventDefault();
-        console.log('Login:', username, password);
+       createUserWithEmailAndPassword(auth, username, password)
+       .then((userLogin) => {
+       console.log(userLogin);
+       })
+       .catch((error) => {
+           console.log(error);
+       });
     };
+    
     return (
         <div className="create-container">
             <h2>Create New Account</h2>
@@ -36,15 +45,3 @@ export default function CreateAccountPage() {
         </div>
     );
 }
-// import React from 'react';
-// import '../styles/CreateAccount.css';
-
-// const CreateAccount = () => {
-//     return (
-//         <div>
-//             <h2>Create New Account</h2>
-//         </div>
-//     );
-// }
-
-// export default CreateAccount;

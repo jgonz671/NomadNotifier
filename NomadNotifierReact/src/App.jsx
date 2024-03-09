@@ -24,7 +24,7 @@ function App() {
         </div>
         <div className="buttons">
           <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
-          <button className="btn login-btn" onClick={() => navigate('/Login')}>Login</button>
+          <button className="btn signin-btn" onClick={() => navigate('/sign-in')}>Login</button>
           <button className="btn past-travel-btn" onClick={() => navigate('/past-travel')}>Past Travels</button>
           <button className="btn calender-btn" onClick={() => navigate('/Calendar')}>Calendar</button>
         </div>
