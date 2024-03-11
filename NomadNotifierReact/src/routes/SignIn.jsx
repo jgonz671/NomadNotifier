@@ -22,7 +22,7 @@ export default function LoginPage() {
        alert('Login successful. Redirecting...');
        setTimeout(() => {
        navigate('/auth-details'); 
-       }, 1000);
+       }, 800);
        })
        .catch((error) => {
            console.log(error);
@@ -41,7 +41,7 @@ export default function LoginPage() {
            <h2>Login</h2>
            <form onSubmit={handleLogin} className="login-form">
                <div>
-                   <label htmlFor="username">Username:</label>
+                   <label htmlFor="username">Email:</label>
                    <input
                        type="text"
                        id="username"

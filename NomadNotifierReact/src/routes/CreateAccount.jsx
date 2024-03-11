@@ -19,7 +19,7 @@ export default function CreateAccountPage() {
                 alert('Account creation successful. You are successfully logged in.');
                 setTimeout(() => {
                     navigate('/');
-                }, 1000);
+                }, 800);
             })
             .catch((error) => {
                 console.log(error);
