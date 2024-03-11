@@ -17,9 +17,16 @@ export default function LoginPage() {
        signInWithEmailAndPassword(auth, username, password)
        .then((userLogin) => {
        console.log(userLogin);
+       setUsername('');
+       setPassword('');
+       alert('Login successful. Redirecting...');
+       setTimeout(() => {
+       navigate('/auth-details'); 
+       }, 1000);
        })
        .catch((error) => {
            console.log(error);
+           alert('Invalid login credentials.');
        });
    };
 
