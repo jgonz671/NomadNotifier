@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Typewriter from "typewriter-effect";
 import { auth } from './firebase'; 
 import { useLocation, useNavigate } from 'react-router-dom';
+import Nomad from '../src/assets/Nomad-Walker.jpg';
 import './App.css';
 
 function App() {
@@ -47,6 +48,12 @@ function App() {
             }}
           />
         </div>
+        
+        {/*</div>
+        <div className="Images">
+         <img src={Nomad} alt="" /> 
+          </div> */}
+
         <div className="buttons">
           <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
           <button className="btn signin-btn" onClick={handleLoginButtonClick}>Login</button>          

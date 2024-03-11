@@ -19,7 +19,7 @@
 }
 
 .typewriter-container{
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; 
   align-items: center;
   font-size: 4rem;
   color: #555;
@@ -40,6 +40,10 @@ p{
 .buttons{
   display: flex;
   justify-content: center;
+  background-color: #1d3557;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  
   gap: 1rem;
 }
 
