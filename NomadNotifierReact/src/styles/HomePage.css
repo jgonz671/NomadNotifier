@@ -1,4 +1,4 @@
-.HomePage{
+.pastTravel-to-homepage{
   text-align: center top;
   background-color: #ebefef;
   color: #3C3C3C;
@@ -10,12 +10,7 @@
   align-items: center top;
 }
 
-p{
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.home_buttons{
+.home_button{
   display: flex;
   justify-content: center;
   background-color: #ebefef;
@@ -23,7 +18,6 @@ p{
   font-weight: 400;
   font-size: 30px;
   padding: 2rem;
-
   gap: 1rem;
 }
 
@@ -34,11 +28,10 @@ p{
   cursor: pointer;
   font-family: monospace;
   font-weight: 500;
-  background-color: #ebefef;
-  color: #3C3C3C;
-  transition: background-color 0.3s;
+  background-color: #9fd5ee;
+  
 }
 
 .homepage_btn:hover{
-  background-color: #d3ebeb;
+  background-color: #38c5c5;
 }

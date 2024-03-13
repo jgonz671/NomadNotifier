@@ -7,8 +7,8 @@ function PastTravel () {
     const navigate = useNavigate();
 
     return (
-        <div className="HomePage">
-                <div className = "home_buttons">
+        <div className="pastTravel-to-homepage">
+                <div className = "home_button">
                     <button className="homepage_btn homepage-homepage_btn" onClick={() => navigate('/')}>
                         <Typewriter
                             onInit={(typewriter) => {
@@ -20,10 +20,7 @@ function PastTravel () {
                         />
                     </button>
                 </div>
-
-             <div>
-                <h2>Past Travels</h2>
-            </div>
+            <h2>Past Travels</h2>
         </div>
 
     )

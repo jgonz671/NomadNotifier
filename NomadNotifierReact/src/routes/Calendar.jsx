@@ -3,7 +3,6 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Typewriter from "typewriter-effect";
-import '../styles/HomePage.css';
 import '../styles/Calendar.css';
 
 function Calendar() {
@@ -13,7 +12,7 @@ function Calendar() {
     const navigate = useNavigate();
 
     return (
-        <div className="HomePage">
+        <div className="CalenderPage">
             <div className="home_buttons">
                 <button className="homepage_btn homepage-homepage_btn" onClick={() => navigate('/')}>
                     <Typewriter
