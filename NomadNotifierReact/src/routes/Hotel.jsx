@@ -23,6 +23,9 @@ export default function Hotel() {
         navigate('/roomnumber', { state: { people, destination, hotel } });
     };
 
+    const handleBack = () => {
+        navigate('/Destination', { state: { people, destination, hotel } });
+    };
 
     return (
         <div className="web-container">
@@ -41,6 +44,7 @@ export default function Hotel() {
                 ))}
             </select>
             <br />
+            <button className="back-button" onClick={handleBack}>Back</button>
             <button className="next-button" onClick={handleNext} disabled={!hotel}>Next</button>
         </div>
     );

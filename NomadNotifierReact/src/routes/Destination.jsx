@@ -21,6 +21,10 @@ export default function Destination() {
         navigate('/hotel', { state: { people, destination } }); 
     };
 
+    const handleBack = () => {
+        navigate('/Travel', { state: { people, destination } }); 
+    };
+
     return (
         <div className="web-container">
             <h2>Where would you like to visit?</h2>
@@ -38,6 +42,7 @@ export default function Destination() {
                 ))}
             </select>
             <br />
+            <button className="back-button" onClick={handleBack}>Back</button>
             <button className="next-button" onClick={handleNext} disabled={!destination}>Next</button>
         </div>
     );

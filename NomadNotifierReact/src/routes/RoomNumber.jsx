@@ -13,6 +13,9 @@ export default function PlanTravel() {
        navigate('/confirm-reservation', {state: { people, destination, hotel, number }});
    };
 
+   const handleBack = () => {
+    navigate('/hotel', { state: { people, destination, hotel } });
+   };
 
    return (
        <div className="web-container">
@@ -24,6 +27,7 @@ export default function PlanTravel() {
                ))}
            </select>
            <br />
+           <button className="back-button" onClick={handleBack}>Back</button>
            <button className="next-button" onClick={handleNext}>Next</button>
        </div>
    );
