@@ -2,7 +2,7 @@
 CS180 course project - UCR
 
 ## Installing and Building the code  
-To run the code you must be in a linux enviroment (such as using WSL) first as we are using ubuntu(must be able to install and run ubuntu before). All of the installation instructions are to be done in the NomadNotifierReact directory(folder). Next, we must install npm twice(in order, must let each finish individually):  
+To run the code you must be in a linux enviroment (such as using WSL) first as we are using ubuntu(must be able to install and run ubuntu before). All of the installation instructions are to be done in the NomadNotifierReact directory (folder). Next, we must install npm twice (in order, must let each finish individually):  
 ```bash
  apt install npm
  npm install
