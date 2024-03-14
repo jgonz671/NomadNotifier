@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+/*
+Destination displays a menu with six destination choices
+setDestination records choice upon selection
+people and destination variables are forwarded to next state
+1. Next: takes user to hotel page
+2. Back: takes user to travel page
+*/
 export default function Destination() {
     const [destination, setDestination] = useState('');
     const navigate = useNavigate();
