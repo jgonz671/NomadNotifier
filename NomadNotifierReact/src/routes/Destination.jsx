@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { collection, query, getDocs, getFirestore } from "firebase/firestore";
 import { app } from "../firebase";
+import "../styles/Destination.css";
 
 
 const db = getFirestore(app);
@@ -45,6 +46,11 @@ export default function Destination() {
        navigate('/hotel', { state: { people, selectedAttraction: selectedAttractionDetails } });
    };
 
+   const handleBack = () => {
+        const selectedAttractionDetails = attractions.find(attraction => attraction.id === selectedAttraction);
+        navigate('/travel', { state: { people, selectedAttraction: selectedAttractionDetails } });
+   }
+
 
    return (
        <div className="web-container">
@@ -63,7 +69,10 @@ export default function Destination() {
                ))}
            </select>
            <br />
-           <button className="next-button" onClick={handleNext} disabled={!selectedAttraction}>Next</button>
+           <div className="action-btn">
+                <button className="back-button" onClick={handleBack}>Back</button>
+                <button className="next-button" onClick={handleNext} disabled={!selectedAttraction}>Next</button>
+            </div>
        </div>
    );
 }

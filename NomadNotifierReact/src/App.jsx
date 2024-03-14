@@ -55,10 +55,10 @@ function App() {
           </div> */}
 
         <div className="buttons">
-          <button className="btn plan-travel-btn" onClick={() => navigate('/Travel')}>Plan a Travel</button>
+          <button className="btn plan-travel-btn" onClick={() => navigate('/travel')}>Plan a Travel</button>
           <button className="btn signin-btn" onClick={handleLoginButtonClick}>Login</button>          
           <button className="btn past-travel-btn" onClick={() => navigate('/past-travel')}>Past Travels</button>
-          <button className="btn calender-btn" onClick={() => navigate('/Calendar')}>Calendar</button>
+          <button className="btn calender-btn" onClick={() => navigate('/calendar')}>Calendar</button>
         </div>
       </header>
     </div>

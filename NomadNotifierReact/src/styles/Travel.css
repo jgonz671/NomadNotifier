@@ -1,0 +1,19 @@
+.web-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-btn{
+    /* width: 200px; */
+    margin: 0 auto;
+    display: inline;
+}
+
+.back-button{
+    margin-right: 25px;
+}
+
+.next-button{
+    margin-left: 25px;
+}

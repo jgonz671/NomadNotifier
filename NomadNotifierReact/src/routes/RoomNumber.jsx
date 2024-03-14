@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import "../styles/RoomNumber.css";
 /*
 PlanTravel lets user choose the number of rooms
 setNumber records choice upon selection
@@ -29,7 +30,7 @@ export default function PlanTravel() {
                ))}
            </select>
            <br />
-           <button className="next-button" onClick={handleNext}>Next</button>
+                <button className="next-button" onClick={handleNext}>Next</button>
        </div>
    );
 }

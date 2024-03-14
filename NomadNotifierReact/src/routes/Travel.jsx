@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Travel.css';
 /*
 PlanTravel lets user choose the number of travelers
 setPeople records choice upon selection
@@ -30,8 +31,10 @@ export default function PlanTravel() {
                ))}
            </select>
            <br />
-           <button className="back-button" onClick={handleBack}>Back</button>
-           <button className="next-button" onClick={handleNext}>Next</button>
+           <div className="action-btn">
+                <button className="back-button" onClick={handleBack}>Back</button>
+                <button className="next-button" onClick={handleNext}>Next</button>
+           </div>
        </div>
    );
 }

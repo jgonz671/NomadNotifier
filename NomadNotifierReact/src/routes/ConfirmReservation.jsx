@@ -30,10 +30,9 @@ export default function ConfirmReservation(){
             <p>Where we're staying: <strong>{hotel}</strong></p>
             <p>How many rooms needed: <strong>{number}</strong></p>
             <p>Where we're planning to visit: <strong>{attraction}</strong></p>
-            <button className="next-button" onClick={handleNext}>Confirm</button> 
-
-            <div className='HomeButton'>
-            <button className="returnHomePageButton" onClick={() => navigate('/')}>Cancel</button>
+            <div className='action-btn'>
+                <button className="returnHomePageButton" onClick={() => navigate('/')}>Cancel</button>
+                <button className="next-button" onClick={handleNext}>Confirm</button> 
             </div>
         </div>
         // <h2>Test</h2>
