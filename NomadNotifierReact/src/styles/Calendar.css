@@ -39,3 +39,8 @@
   .homepage_btn:hover{
     background-color: #38c5c5;
   }
+
+  #returnHomePageButton {
+    justify-content: left;
+    background-color: #38c5c5;
+  }

@@ -1,47 +1,34 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+//import React, { useState } from 'react';
+import React from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
-import Typewriter from "typewriter-effect";
+import Fullcalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import '../styles/Calendar.css';
 
-function Calendar() {
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
 
+
+function Calendar() {
     const navigate = useNavigate();
 
-    return (
-        <div className="CalenderPage">
-            <div className="home_buttons">
-                <button className="homepage_btn homepage-homepage_btn" onClick={() => navigate('/')}>
-                    <Typewriter
-                        onInit={(typewriter) => {
-                            typewriter
-                            .changeDelay(60)
-                            .typeString("Nomad Notifier.")
-                            .start();
-                        }}
-                    />
-                </button>
-            </div>
-
-            <div className="calendar-container">
-                <DatePicker
-                    selected={startDate}
-                    onChange={(dates) => {
-                        const [start, end] = dates;
-                        setStartDate(start);
-                        setEndDate(end);
-                    }}
-                    startDate={startDate}
-                    endDate={endDate}
-                    selectsRange
-                    inline
-                />
-            </div>
+  return (
+    <div>
+        <button id="returnHomePageButton" onClick={() => navigate('/')}>NomadNotifier</button>
+        <div>
+        <Fullcalendar
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        initialView={"dayGridMonth"}
+        headerToolbar={{
+          start: "today prev,next", // will normally be on the left. if RTL, will be on the right
+          center: "title",
+          end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
+        }}
+        height={"90vh"}
+      />
         </div>
-    );
+    </div>
+  );
 }
 
 export default Calendar;
