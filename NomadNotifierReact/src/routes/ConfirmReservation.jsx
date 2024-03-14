@@ -1,25 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../styles/ConfirmReservation.css'
-/*
-ConfirmReservation first displays user data: 
-1. # of people 2. Destination 3. Hotel 4. Rooms 5. Attraction
-It forwards these to the attraction page. 
-Users may proceed to the attraction page with the confirm button
-or
-Users may return to homepage, resetting trip.
-*/
-export default function ConfirmReservation(){
-    const location = useLocation(); 
-    const navigate = useNavigate();
-    const { people, destination, hotel, number, attraction } = location.state || { people: 1, destination: "", hotel: "", number: 1, attraction: ""}; 
+import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebase';
+import '../styles/ConfirmReservation.css';
 
-    const handleNext = () => {
-        // navigate('/attraction', { state: { people, destination, hotel, number, attraction } });
-        alert('You\'re all set! Enjoy your trip!')
-        setTimeout(() => {
-        navigate('/'); 
-        }, 200);
+export default function ConfirmReservation() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { people, destination, hotel, number, attraction } = location.state || { people: 1, destination: "", hotel: "", number: 1, attraction: "" };
+    const [username, ] = useState(''); 
+
+    const handleNext = async () => {
+        try {
+            // Get the number of trips for this user
+            const tripQuery = query(collection(db, 'pasttravels'), where('username', '==', username));
+            const tripSnapshot = await getDocs(tripQuery);
+            const tripCount = tripSnapshot.size + 1; 
+
+
+            const documentId = `${username} #${tripCount}`;
+
+            // Save the trip information to Firestore
+            await addDoc(collection(db, 'pasttravels'), {
+                attendees: people,
+                destination: `${destination.city}, ${destination.country}`,
+                hotel: hotel,
+                attraction: attraction,
+                username: username,
+                documentId: documentId
+            });
+
+            console.log('Trip information saved to Firestore');
+            alert('You\'re all set! Enjoy your trip!');
+            setTimeout(() => {
+                navigate('/');
+            }, 200);
+        } catch (error) {
+            console.error('Error saving trip information:', error);
+            alert('Error saving trip information. Please try again.');
+        }
     };
 
     return (
@@ -32,11 +51,8 @@ export default function ConfirmReservation(){
             <p>Where we're planning to visit: <strong>{attraction}</strong></p>
             <div className='action-btn'>
                 <button className="returnHomePageButton" onClick={() => navigate('/')}>Cancel</button>
-                <button className="next-button" onClick={handleNext}>Confirm</button> 
+                <button className="next-button" onClick={handleNext}>Confirm</button>
             </div>
         </div>
-        // <h2>Test</h2>
     );
-};
-
-
+}
