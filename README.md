@@ -26,3 +26,7 @@ For our calendar, we use the react date picker by installing:
 ```bash
 npm install react-datepicker --save
 ```
+We are using Firebase as our backend(Database), and so we need to install firebase locally: 
+```bash
+npm install --save firebase
+```
