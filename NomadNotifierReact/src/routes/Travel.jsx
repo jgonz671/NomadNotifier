@@ -11,6 +11,9 @@ export default function PlanTravel() {
        navigate('/destination', { state: { people } });
    };
 
+   const handleBack = () => {
+    navigate('/', { state: { people } });
+   };
 
    return (
        <div className="web-container">
@@ -22,6 +25,7 @@ export default function PlanTravel() {
                ))}
            </select>
            <br />
+           <button className="back-button" onClick={handleBack}>Back</button>
            <button className="next-button" onClick={handleNext}>Next</button>
        </div>
    );

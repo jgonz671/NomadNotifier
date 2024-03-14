@@ -1,0 +1,37 @@
+.pastTravel-to-homepage{
+  text-align: center top;
+  background-color: #ebefef;
+  color: #3C3C3C;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center top;
+  align-items: center top;
+}
+
+.home_button{
+  display: flex;
+  justify-content: center;
+  background-color: #ebefef;
+  border-radius: 0.0rem;
+  font-weight: 400;
+  font-size: 30px;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.homepage_btn{
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: 500;
+  background-color: #9fd5ee;
+  
+}
+
+.homepage_btn:hover{
+  background-color: #38c5c5;
+}

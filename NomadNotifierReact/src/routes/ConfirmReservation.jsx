@@ -1,6 +1,14 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-
+import { useLocation, useNavigate } from 'react-router-dom';
+import '../styles/ConfirmReservation.css'
+/*
+ConfirmReservation first displays user data: 
+1. # of people 2. Destination 3. Hotel 4. Rooms
+It forwards these to the attraction page. 
+Users may proceed to the attraction page with the confirm button
+or
+Users may return to homepage, resetting trip.
+*/
 export default function ConfirmReservation(){
     const location = useLocation(); 
     const { people, destination, hotel, number } = location.state || {}; 
@@ -8,6 +16,8 @@ export default function ConfirmReservation(){
     const handleNext = () => {
         navigate('/attraction', { state: { people, destination, hotel, number } });
     };
+
+    const navigate = useNavigate();
 
     return (
         <div className="web-container">
@@ -17,6 +27,10 @@ export default function ConfirmReservation(){
             <p>Where we're staying: <strong>{hotel}</strong></p>
             <p>How many rooms we have: <strong>{number}</strong></p>
             <button className="next-button" onClick={handleNext}>Confirm</button> 
+
+            <div className='HomeButton'>
+            <button className="returnHomePageButton" onClick={() => navigate('/')}>return Home</button>
+            </div>
         </div>
     );
 };
