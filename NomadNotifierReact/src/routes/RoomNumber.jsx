@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+/*
+PlanTravel lets user choose the number of rooms
+setNumber records choice upon selection
+people, destination, and hotel variables are forwarded to next state
+1. Next: takes user to confirmation page
+2. Back: takes user to hotel page
+*/
 export default function PlanTravel() {
    const [number, setNumber] = useState(1);
    const navigate = useNavigate();
