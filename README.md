@@ -30,3 +30,11 @@ We are using Firebase as our backend(Database), and so we need to install fireba
 ```bash
 npm install --save firebase
 ```
+To build our application use command:
+```bash
+npm run build
+```
+To run our application use command:
+```bash
+npm run dev
+```
