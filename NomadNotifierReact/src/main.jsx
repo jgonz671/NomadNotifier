@@ -13,6 +13,7 @@ import ConfirmReservation from './routes/ConfirmReservation'
 import AuthDetails from './routes/AuthDetails'
 import "./index.css";
 import Root from "./routes/root";
+import Attractions from './routes/Attractions'
 
 import {
   createBrowserRouter,
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
   {
     path: "/auth-details",
     element: <AuthDetails />,
+  },
+  {
+    path: "/attraction",
+    element: <Attractions />,
   },
 ]);
 
