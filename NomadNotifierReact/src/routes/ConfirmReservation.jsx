@@ -1,6 +1,14 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/ConfirmReservation.css'
+/*
+ConfirmReservation first displays user data: 
+1. # of people 2. Destination 3. Hotel 4. Rooms
+It forwards these to the attraction page. 
+Users may proceed to the attraction page with the confirm button
+or
+Users may return to homepage, resetting trip.
+*/
 export default function ConfirmReservation(){
     const location = useLocation(); 
     const { people, destination, hotel, number } = location.state || {}; 
