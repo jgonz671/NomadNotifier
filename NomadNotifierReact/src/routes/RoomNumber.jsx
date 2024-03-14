@@ -16,7 +16,7 @@ export default function PlanTravel() {
 
 
    const handleNext = () => {
-        navigate('/attraction', { state: { people, destination, hotel, number } });
+        navigate('/attraction', { state: { people, destination, hotel, number: number } });
    };
 
    return (

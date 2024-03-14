@@ -3,3 +3,7 @@
     color: white;
 }
 
+.returnHomePageButton:hover{
+    background-color: #535bf2;
+    border-color: #fff;
+}
