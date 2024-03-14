@@ -22,9 +22,9 @@ run these lines of code sequentially, so we can get the right packages to run wi
 sudo agt-get autoremove
 npm install
 ```
-For our calendar, we use the react date picker by installing:
+For our calendar, we use the React component for FullCalendar by installing:
 ```bash
-npm install react-datepicker --save
+npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/interaction
 ```
 We are using Firebase as our backend(Database), and so we need to install firebase locally: 
 ```bash
