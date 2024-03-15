@@ -38,3 +38,11 @@ To run our application use command:
 ```bash
 npm run dev
 ```
+To install our testing environment using Jest, use command: 
+```bash
+npm install --save-dev jest@latest @testing-library/react @testing-library/jest-dom @testing-library/user-event babel-jest jest-environment-jsdom
+```
+To run our test's through Jest, use command: 
+```bash
+npm test
+```
