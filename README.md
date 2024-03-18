@@ -1,5 +1,4 @@
 # NomadNotifier
-CS180 course project - UCR
 
 ## Installing and Building the code  
 To run the code you must be in a linux enviroment (such as using WSL) first as we are using ubuntu(must be able to install and run ubuntu before). All of the installation instructions are to be done in the NomadNotifierReact directory (folder). Next, we must install npm twice (in order, must let each finish individually):  
@@ -46,3 +45,11 @@ To run our test's through Jest, use command:
 ```bash
 npm test
 ```
+
+## UML Class Diagram
+<img width="527" alt="Screen Shot 2024-03-17 at 11 55 10 PM" src="https://github.com/jgonz671/NomadNotifier/assets/129993436/c055ea65-8bd8-413d-a6c0-653f414fc13a">
+
+## UML Case Diagram
+<img width="586" alt="Screen Shot 2024-03-17 at 11 56 23 PM" src="https://github.com/jgonz671/NomadNotifier/assets/129993436/b94f4c90-8607-40a1-8a24-81586eb79068">
+
+
